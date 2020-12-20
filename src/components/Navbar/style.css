@@ -23,8 +23,8 @@ nav.navbar.navbar-default {
 }
 
 #about{
-/* transform: translateY(20%); */
-transform: translateX(280%);
+  transform: translateX(400%);
+/* transform: translateX(280%); */
 border: 2px solid black;
 border-radius: 5px;
 margin: 10px;
@@ -35,7 +35,7 @@ padding-top: 10px;
 }
 
 #signup{
-  transform: translateX(278%);
+  transform: translateX(412%);
   border: 2px solid black;
 border-radius: 5px;
 margin: 10px;
@@ -46,7 +46,8 @@ padding-top: 10px;
 }
 
 #signIn{
-  transform: translateX(320%);
+  /* transform: translateX(320%); */
+  transform: translate(320%, 200%);
   border: 2px solid black;
 border-radius: 5px;
 margin: 10px;
@@ -54,4 +55,8 @@ background-color: rgb(105, 128, 105, .5);
 padding-bottom: 3px;
 color: black;
 padding-top: 10px;
+}
+
+#note{
+  transform:translate(320%,100%);
 }

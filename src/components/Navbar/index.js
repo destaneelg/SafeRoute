@@ -39,6 +39,9 @@ function Navbar() {
             >
               Sign In
             </Link>
+            <div id="note" style={{fontStyle:"italic", color: "black", fontWeight: "bold"}}>
+              or
+            </div>
         </ul>
       </div>
       
