@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
 
+  document.title="Safe Route";
+
   const style = {
     backgroundImage: "url(https://images.unsplash.com/photo-1533745848184-3db07256e163?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8d2VsY29tZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)",
     backgroundPosition: "center",
@@ -29,6 +31,7 @@ function App() {
   }
 
   return (
+    
     <Router>
     <div container-fluid App-header className="App" style={style}>
     <Navbar />
