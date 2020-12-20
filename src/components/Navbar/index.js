@@ -11,9 +11,16 @@ function Navbar() {
       <div>
         <ul className="navbar-nav">
 
-        <Link className="navbar-brand" to="/" id= "title" style = {{color: "white", fontSize: "180%", textDecoration: "none"}}>
+        <Link className="navbar-brand" to="/" id= "title" style = {{color: "black", fontSize: "240%", textDecoration: "none", fontWeight: "bold"}}>
         Safe Route
-      </Link>
+        </Link>
+            <Link
+              to="/about" id = "about"
+              className={window.location.pathname === "/about" ? "nav-link active" : "nav-link"}
+              style = {{fontSize: "80%", textDecoration: "none"}}
+            >
+              About
+            </Link>
             <Link
               to="/" id = "signup"
               className={
@@ -21,16 +28,16 @@ function Navbar() {
                   ? "nav-link active"
                   : "nav-link"
               }
-            style = {{color: "white", fontSize: "130%", textDecoration: "none"}}
+            style = {{fontSize: "80%", textDecoration: "none"}}
             >
               Sign Up
             </Link>
             <Link
-              to="/favorites" id = "favorites"
-              className={window.location.pathname === "/favorites" ? "nav-link active" : "nav-link"}
-              style = {{color: "white", fontSize: "130%", textDecoration: "none"}}
+              to="/signIn" id = "signIn"
+              className={window.location.pathname === "/signIn" ? "nav-link active" : "nav-link"}
+              style = {{fontSize: "80%", textDecoration: "none"}}
             >
-              Favorites
+              Sign In
             </Link>
         </ul>
       </div>

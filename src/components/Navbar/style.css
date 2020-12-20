@@ -9,12 +9,49 @@ nav.navbar.navbar-default {
   text-align: center;
   margin-top: 0;
 }
-#singup:hover, #favorites:hover{
-  background-color: rgb(255, 75, 75);
-  border-radius: 4px;
+
+#signup:hover, #signIn:hover, #about:hover{
+  background-color: black;
+  border: 2px solid slategray;
+  border-radius: 5px;
   transition: all 0.2s ease-out;
+  color: silver;
 }
 
-#signup, #favorites{
-transform: translateY(20%)
+#title{
+  transform: translateX(-60px)
+}
+
+#about{
+/* transform: translateY(20%); */
+transform: translateX(280%);
+border: 2px solid black;
+border-radius: 5px;
+margin: 10px;
+background-color: rgb(105, 128, 105, .5);
+padding-bottom: 3px;
+color: black;
+padding-top: 10px;
+}
+
+#signup{
+  transform: translateX(278%);
+  border: 2px solid black;
+border-radius: 5px;
+margin: 10px;
+background-color: rgb(105, 128, 105, .5);
+padding-bottom: 3px;
+color: black;
+padding-top: 10px;
+}
+
+#signIn{
+  transform: translateX(320%);
+  border: 2px solid black;
+border-radius: 5px;
+margin: 10px;
+background-color: rgb(105, 128, 105, .5);
+padding-bottom: 3px;
+color: black;
+padding-top: 10px;
 }
