@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import SearchForm from "./SearchForm";
+import SearchForm from "./components/SearchForm";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 // import background from "./img/belinda-fewings-6wAGwpsXHE0-unsplash.jpg";
 // import SearchPage from './Components/SearchPage.js';
 
@@ -15,20 +17,29 @@ function App() {
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
     fontSize: "calc(10px + 2vmin)",
     color: "white"
+  };
+  const style2 ={
+    minHeight: "80vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   }
 
   return (
-    <div container-fluid App-header className="App" style = {style}>
+    <Router>
+    <div container-fluid App-header className="App" style={style}>
+    <Navbar />
+    <div style={style2}>
       <header className="App-header">
         {/* <SearchPage /> */}
       </header>
       <SearchForm />
-      
+      </div>
     </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,20 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+}
+
+.navbar-nav{
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  padding-bottom: 10px;
+  text-align: center;
+  margin-top: 0;
+}
+#singup:hover, #favorites:hover{
+  background-color: rgb(255, 75, 75);
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+#signup, #favorites{
+transform: translateY(20%)
+}
