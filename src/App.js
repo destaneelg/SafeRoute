@@ -3,7 +3,8 @@ import './App.css';
 import React from "react";
 import SearchForm from "./components/SearchForm";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import { BrowserRouter as Router } from "react-router-dom";
 // import background from "./img/belinda-fewings-6wAGwpsXHE0-unsplash.jpg";
 // import SearchPage from './Components/SearchPage.js';
 

@@ -1,7 +1,7 @@
 form.search {
   overflow: auto;
   margin-bottom: 10px;
-  transform: translateY(-110%)
+  transform: translateY(-110%);
 }
 
 form.search button[type="submit"] {
