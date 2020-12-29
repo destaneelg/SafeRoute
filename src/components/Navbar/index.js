@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-// import SearchForm from "../SearchForm";
+// import SearchForm from "../SearchField";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
@@ -21,21 +21,15 @@ function Navbar() {
       dialogbox.style.display="block";
       document.getElementById('dialogboxhead').innerHTML = "About SafeRoute";
       document.getElementById('dialogboxbody').innerHTML = "Summary information";
-      document.getElementById('dialogboxfoot').innerHTML = "<button onclick = 'Alert.close()'>Close</button>"
-
     }
 
-    this.close = function () {
+   
+  }
+    function close () {
+      document.getElementById('dialogbox').style.display = 'none';
+      document.getElementById('dialogoverlay').style.display = 'none';
     }
-    }
-    // alert("Button was clicked");
-    // var x = document.getElementById("about");
-    // if (x.style.display === "none") {
-    //   x.style.display = "block";
-    // } else {
-    //   x.style.display = "none";
-    // }
-  // }
+  
 
   var Alert = new CustomAlert();
 
@@ -87,7 +81,9 @@ function Navbar() {
         <div>
           <div id ="dialogboxhead"></div>
           <div id ="dialogboxbody"></div>
-          <div id ="dialogboxfoot"></div>
+          <div id ="dialogboxfoot">
+            <button onClick={close}>Close</button>
+          </div>
         </div>
       </div>
     </div>

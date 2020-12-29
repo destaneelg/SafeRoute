@@ -1,17 +1,19 @@
-// import React from "react";
+import React from "react";
 // import Navbar from "../components/Navbar";
 // import SearchForm from "./components/SearchForm";
 // import Navbar from "./components/Navbar";
 // import { BrowserRouter as Router } from "react-router-dom";
 
-// const Results = function Results() {
+const SignIn = function SignIn() {
 
-// return(
-// <Router>
-// <Navbar />
-// <SearchForm />
-// </Router>
-// )
-// }
+return(
+    <div>Sign In
+{/* <Router>
+<Navbar />
+<SearchForm />
+</Router> */}
+</div>
+)
+}
 
-// export default  Results;
+export default  SignIn;

@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import SearchForm from "./components/SearchForm";
+import SearchField from "./components/SearchField";
 import Navbar from "./components/Navbar";
 
 import { BrowserRouter as Router } from "react-router-dom";
@@ -40,7 +40,7 @@ function App() {
       <header className="App-header">
         {/* <SearchPage /> */}
       </header>
-      <SearchForm />
+      <SearchField />
       </div>
     </div>
     </Router>

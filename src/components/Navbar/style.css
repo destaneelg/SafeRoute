@@ -76,11 +76,12 @@ padding-top: 10px;
 
 #dialogbox{
   display:none;
-  background:#000;
+  background:purple;
   border-radius:7px;
   width: 550px;
   position: relative;
   z-index:10;
+  border: 5px double black;
 }
 
 #dialogbox > div { 
@@ -89,20 +90,20 @@ padding-top: 10px;
 }
 
 #dialogbox > div > #dialogboxhead {
-  background: #666; 
+  background: purple; 
   font-size:19px;
   padding: 10px; 
   color: #CCC;
 }
 
 #dialogbox > div > #dialogboxbody{
-  background: #333;
+  background:purple;
   padding: 20px;
   color: #FFF;
 }
 
 #dialogbox > div > #dialogboxfoot{
-  background: #666;
+  background: purple;
   padding: 10px;
   text-align: right;
 }
