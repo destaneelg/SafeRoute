@@ -76,34 +76,34 @@ padding-top: 10px;
 
 #dialogbox{
   display:none;
-  background: rgb(12, 207, 221, .6);
+  background:rgb(0, 0, 0, .5);
   border-radius:7px;
   width: 550px;
   position: relative;
   z-index:10;
-  border: 5px double gold;
+  border: 5px double black;
 }
 
 #dialogbox > div { 
-  background:rgb(12, 207, 221, .6);
+  background: rgb(0, 128, 0, .5);
   margin: 8px;
 }
 
 #dialogbox > div > #dialogboxhead {
-  background: rgb(12, 207, 221, .6); 
-  font-size:19px;
+  background: rgb(0, 128, 0, .5); 
+  font-size:25px;
   padding: 10px; 
-  color: black;
+  color:yellow;
 }
 
 #dialogbox > div > #dialogboxbody{
-  background:rgb(12, 207, 221, .6);
+  background:rgb(0, 128, 0, .5);
   padding: 20px;
-  color: black;
+  color: yellow;
 }
 
 #dialogbox > div > #dialogboxfoot{
-  background:rgb(12, 207, 221, .6);
+  background:rgb(0, 128, 0, .5);
   padding: 10px;
   text-align: right;
 }
@@ -111,12 +111,11 @@ padding-top: 10px;
 /*Sign In Dialog Box==========================================*/
 #signin{
   display:none;
-  background: rgb(12, 207, 221, .6);
-  border-radius:7px;
+  background:rgb(0, 0, 0, .5);
   width: 550px;
   position: relative;
   z-index:10;
-  border: 5px double gold;
+  border: 5px double black;
 }
 
 #signin > div > #signinbody> form{
@@ -125,26 +124,30 @@ padding-top: 10px;
   z-index:10;
 }
 
+#signin > div > #signinbody> form > input{
+  border-radius: 5px;
+}
+
 #signin > div { 
-  background:rgb(12, 207, 221, .6);
+  background:rgb(0, 128, 0, .5);
   margin: 8px;
 }
 
 #signin > div > #signinhead {
-  background: rgb(12, 207, 221, .6); 
-  font-size:19px;
+  background: rgb(0, 128, 0, .5);
+  font-size:25px;
   padding: 10px; 
-  color: black;
+  color: yellow;
 }
 
 #signin > div > #signinbody{
-  background:rgb(12, 207, 221, .6);
+  background:rgb(0, 128, 0, .5);
   padding: 20px;
-  color: black;
+  color: yellow;
 }
 
 #signin > div > #signinfoot{
-  background:rgb(12, 207, 221, .6);
+  background:rgb(0, 128, 0, .5);
   padding: 10px;
   text-align: right;
 }
@@ -153,12 +156,12 @@ padding-top: 10px;
 
 #signUp{
   display:none;
-  background: rgb(12, 207, 221, .6);
+  background:rgb(0, 0, 0, .5);
   border-radius:7px;
   width: 550px;
   position: relative;
   z-index:10;
-  border: 5px double gold;
+  border: 5px double black;
 }
 
 #signUp > div > #signupbody> form{
@@ -168,26 +171,46 @@ padding-top: 10px;
   font-size: 20px;
 }
 
+#signUp > div > #signupbody> form > input{
+ border-radius: 5px;
+}
+
+
 #signUp > div { 
-  background:rgb(12, 207, 221, .6);
+  background:rgb(0, 128, 0, .5);
   margin: 8px;
 }
 
 #signUp > div > #signuphead {
-  background: rgb(12, 207, 221, .6); 
+  background: rgb(0, 128, 0, .5);
   font-size:25px;
   padding: 10px; 
-  color: black;
+  color: yellow;
 }
 
 #signUp > div > #signupbody{
-  background:rgb(12, 207, 221, .6);
+  background:rgb(0, 128, 0, .5);
   padding: 20px;
-  color: black;
+  color: yellow;
 }
 
 #signUp > div > #signupfoot{
-  background:rgb(12, 207, 221, .6);
+  background:rgb(0, 128, 0, .5);
   padding: 10px;
   text-align: right;
+}
+
+button {
+  background-color: rgb(0, 0, 0, .5);
+  border: 2px solid black;
+  border-radius: 5px;
+  color: yellow;
+}
+
+button:hover {
+  background-color: black;
+  border: 2px solid slategray;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+  color: silver;
 }

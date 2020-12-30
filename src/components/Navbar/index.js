@@ -1,11 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import SearchField from "../SearchField";
 
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
-
+//CSS for SearchFiled
+  const style2 ={
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    minHeight: "80vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    
+  }
 //About Prompt Functions =========================================================================
 
   function CustomAlert() {
@@ -22,12 +34,14 @@ function Navbar() {
       dialogbox.style.display="block";
       document.getElementById('dialogboxhead').innerHTML = "About SafeRoute";
       document.getElementById('dialogboxbody').innerHTML = "Summary information";
+      document.getElementById('searchfield').style.display = 'none';
     }
    
   }
     function close () {
       document.getElementById('dialogbox').style.display = 'none';
       document.getElementById('dialogoverlay').style.display = 'none';
+      document.getElementById('searchfield').style.display = 'flex';
     }
     var Alert = new CustomAlert();
 
@@ -46,12 +60,14 @@ function Navbar() {
         signIn.style.top = "100px";
         signIn.style.display="block";
         document.getElementById('signinhead').innerHTML = "Sign In";
+        document.getElementById('searchfield').style.display = 'none';
       }
     }
 
     function login () {
       document.getElementById('signin').style.display = 'none';
       document.getElementById('dialogoverlay').style.display = 'none';
+      document.getElementById('searchfield').style.display = 'flex';
     }
     
     var signIn = new SignIn();
@@ -70,13 +86,15 @@ function Navbar() {
         signUp.style.left = (winW/2) -(550 * .5) + "px";
         signUp.style.top = "100px";
         signUp.style.display="block";
-        document.getElementById('signuphead').innerHTML = "Register";
+        document.getElementById('signuphead').innerHTML = "Sign Up";
+        document.getElementById('searchfield').style.display = 'none';
       }
     }
 
     function register () {
       document.getElementById('signUp').style.display = 'none';
       document.getElementById('dialogoverlay').style.display = 'none';
+      document.getElementById('searchfield').style.display = 'flex';
     }
     
     var signUp = new SignUp();
@@ -148,6 +166,7 @@ function Navbar() {
           </div>
           <div id ="signinfoot">
             <button onClick={login}>Sign In</button>
+            <button onClick={login} style = {{marginLeft: "4px"}}>Cancel</button>
           </div>
         </div>
       </div>
@@ -169,10 +188,15 @@ function Navbar() {
           </div>
           <div id ="signupfoot">
             <button onClick={register}>Register</button>
+            <button onClick={register} style = {{marginLeft: "4px"}}>Cancel</button>
           </div>
         </div>
       </div>
-    
+     
+      <div style={style2} id = "searchfield">
+        <SearchField />
+      </div>
+   
     </div>
   );
 }

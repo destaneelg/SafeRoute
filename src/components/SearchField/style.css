@@ -2,16 +2,17 @@ form.search {
   overflow: auto;
   margin-bottom: 10px;
   transform: translateY(-110%);
-  /* position: absolute;
-  z-index: 0; */
+  /* position: fixed;
+  z-index: -1; */
 }
 
 form.search button[type="submit"] {
   float: right;
   margin-top: 10px;
+  position: fixed;
 }
 
-form{
-  position: fixed;
-  z-index: 0;
-}
+/* form{
+   position: fixed;
+  z-index: 0; 
+} */
