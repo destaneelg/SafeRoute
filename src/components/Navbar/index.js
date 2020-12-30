@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-// import SearchForm from "../SearchField";
+
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
+
+//About Prompt Functions =========================================================================
+
   function CustomAlert() {
     this.render = function (){
-
-  // alert("Button was clicked");
 
       var winW = window.innerWidth;
       var winH = window.innerHeight;
@@ -22,17 +23,64 @@ function Navbar() {
       document.getElementById('dialogboxhead').innerHTML = "About SafeRoute";
       document.getElementById('dialogboxbody').innerHTML = "Summary information";
     }
-
    
   }
     function close () {
       document.getElementById('dialogbox').style.display = 'none';
       document.getElementById('dialogoverlay').style.display = 'none';
     }
+    var Alert = new CustomAlert();
+
+//Sign In Prompt Functions============================================================
   
+    function SignIn() {
+      this.render = function (){
+  
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var signIn = document.getElementById('signin');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH + "px";
+        signIn.style.left = (winW/2) -(550 * .5) + "px";
+        signIn.style.top = "100px";
+        signIn.style.display="block";
+        document.getElementById('signinhead').innerHTML = "Sign In";
+      }
+    }
 
-  var Alert = new CustomAlert();
+    function login () {
+      document.getElementById('signin').style.display = 'none';
+      document.getElementById('dialogoverlay').style.display = 'none';
+    }
+    
+    var signIn = new SignIn();
 
+//Sign Up Prompt Functions==============================================================================
+
+    function SignUp() {
+      this.render = function (){
+  
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var signUp = document.getElementById('signUp');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH + "px";
+        signUp.style.left = (winW/2) -(550 * .5) + "px";
+        signUp.style.top = "100px";
+        signUp.style.display="block";
+        document.getElementById('signuphead').innerHTML = "Register";
+      }
+    }
+
+    function register () {
+      document.getElementById('signUp').style.display = 'none';
+      document.getElementById('dialogoverlay').style.display = 'none';
+    }
+    
+    var signUp = new SignUp();
+//React HTML portion =================================================================================================================================
   return (
     <div>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -57,14 +105,14 @@ function Navbar() {
                   ? "nav-link active"
                   : "nav-link"
               }
-            style = {{fontSize: "80%", textDecoration: "none"}}
+            style = {{fontSize: "80%", textDecoration: "none"}} onClick={signUp.render}
             >
               Sign Up
             </Link>
             <Link
               to="/signIn" id = "signIn"
               className={window.location.pathname === "/signIn" ? "nav-link active" : "nav-link"}
-              style = {{fontSize: "80%", textDecoration: "none"}}
+              style = {{fontSize: "80%", textDecoration: "none"}} onClick= {signIn.render}
             >
               Sign In
             </Link>
@@ -86,6 +134,45 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      <div id= "signin">
+        <div>
+          <div id ="signinhead"></div>
+          <div id ="signinbody">
+          <form>
+            <label for="fname">Username</label><br />
+            <input type="text" id="fname" name="fname" value="John" /><br />
+            <label for="lname">Password</label><br />
+            <input type="text" id="lname" name="lname" value="Doe" />
+          </form>
+          </div>
+          <div id ="signinfoot">
+            <button onClick={login}>Sign In</button>
+          </div>
+        </div>
+      </div>
+
+      <div id= "signUp">
+        <div>
+          <div id ="signuphead"></div>
+          <div id ="signupbody">
+          <form>
+            <label for="fname">First name </label>
+            <input type="text" id="fname" name="fname" value="" /><br />
+            <label for="lname">Last name  </label>
+            <input type="text" id="lname" name="lname" value="" /><br />
+            <label for="uname">Username </label>
+            <input type="text" id="uname" name="uname" value="" /><br />
+            <label for="pswd">Password  </label>
+            <input type="text" id="pswd" name="pswd" value="" />
+          </form>
+          </div>
+          <div id ="signupfoot">
+            <button onClick={register}>Register</button>
+          </div>
+        </div>
+      </div>
+    
     </div>
   );
 }

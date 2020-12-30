@@ -61,49 +61,133 @@ padding-top: 10px;
   transform:translate(320%,100%);
 }
 
-/* dialog box========================================*/
+/* About Dialog Box========================================*/
 
 #dialogoverlay{
   display:none;
-  opacity:0.8;
+  /* opacity:0.8; */
   position: fixed;
   top: 0px;
   left: 0px;
-  background: #FFF;
+  /* background: #FFF; */
   width: 100%;
   z-index: 10;
 }
 
 #dialogbox{
   display:none;
-  background:purple;
+  background: rgb(12, 207, 221, .6);
   border-radius:7px;
   width: 550px;
   position: relative;
   z-index:10;
-  border: 5px double black;
+  border: 5px double gold;
 }
 
 #dialogbox > div { 
-  background: #FFF;
+  background:rgb(12, 207, 221, .6);
   margin: 8px;
 }
 
 #dialogbox > div > #dialogboxhead {
-  background: purple; 
+  background: rgb(12, 207, 221, .6); 
   font-size:19px;
   padding: 10px; 
-  color: #CCC;
+  color: black;
 }
 
 #dialogbox > div > #dialogboxbody{
-  background:purple;
+  background:rgb(12, 207, 221, .6);
   padding: 20px;
-  color: #FFF;
+  color: black;
 }
 
 #dialogbox > div > #dialogboxfoot{
-  background: purple;
+  background:rgb(12, 207, 221, .6);
+  padding: 10px;
+  text-align: right;
+}
+
+/*Sign In Dialog Box==========================================*/
+#signin{
+  display:none;
+  background: rgb(12, 207, 221, .6);
+  border-radius:7px;
+  width: 550px;
+  position: relative;
+  z-index:10;
+  border: 5px double gold;
+}
+
+#signin > div > #signinbody> form{
+  height: 100px;
+  position: relative;
+  z-index:10;
+}
+
+#signin > div { 
+  background:rgb(12, 207, 221, .6);
+  margin: 8px;
+}
+
+#signin > div > #signinhead {
+  background: rgb(12, 207, 221, .6); 
+  font-size:19px;
+  padding: 10px; 
+  color: black;
+}
+
+#signin > div > #signinbody{
+  background:rgb(12, 207, 221, .6);
+  padding: 20px;
+  color: black;
+}
+
+#signin > div > #signinfoot{
+  background:rgb(12, 207, 221, .6);
+  padding: 10px;
+  text-align: right;
+}
+
+/*Sign Up Dialog Box=========================================================================*/
+
+#signUp{
+  display:none;
+  background: rgb(12, 207, 221, .6);
+  border-radius:7px;
+  width: 550px;
+  position: relative;
+  z-index:10;
+  border: 5px double gold;
+}
+
+#signUp > div > #signupbody> form{
+  height: 100px;
+  position: relative;
+  z-index:10;
+  font-size: 20px;
+}
+
+#signUp > div { 
+  background:rgb(12, 207, 221, .6);
+  margin: 8px;
+}
+
+#signUp > div > #signuphead {
+  background: rgb(12, 207, 221, .6); 
+  font-size:25px;
+  padding: 10px; 
+  color: black;
+}
+
+#signUp > div > #signupbody{
+  background:rgb(12, 207, 221, .6);
+  padding: 20px;
+  color: black;
+}
+
+#signUp > div > #signupfoot{
+  background:rgb(12, 207, 221, .6);
   padding: 10px;
   text-align: right;
 }
