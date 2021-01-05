@@ -66,13 +66,15 @@ function Navbar() {
       }
     }
 
-    // function login () {
-    //   document.getElementById('signin').style.display = 'none';
-    //   document.getElementById('dialogoverlay').style.display = 'none';
-    //   document.getElementById('searchfield').style.display = 'flex';
-    // }
+    function login () {
+      document.getElementById('signin').style.display = 'none';
+      document.getElementById('dialogoverlay').style.display = 'none';
+      document.getElementById('searchfield').style.display = 'flex';
+    }
     const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+    const [password, setPassword] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [firstname, setFirstname] = useState("");
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -99,16 +101,16 @@ function Navbar() {
         signUp.style.left = (winW/2) -(550 * .5) + "px";
         signUp.style.top = "100px";
         signUp.style.display="block";
-        document.getElementById('signuphead').innerHTML = "Sign Up";
         document.getElementById('searchfield').style.display = 'none';
       }
+    
     }
 
-    // function register () {
-    //   document.getElementById('signUp').style.display = 'none';
-    //   document.getElementById('dialogoverlay').style.display = 'none';
-    //   document.getElementById('searchfield').style.display = 'flex';
-    // }
+    function register () {
+      document.getElementById('signUp').style.display = 'none';
+      document.getElementById('dialogoverlay').style.display = 'none';
+      document.getElementById('searchfield').style.display = 'flex';
+    }
     
     var signUp = new SignUp();
 //React HTML portion =================================================================================================================================
@@ -170,7 +172,7 @@ function Navbar() {
           <div id ="signinbody">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
-          <Form.Label>Username</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             autoFocus
             type="email"
@@ -192,27 +194,50 @@ function Navbar() {
       </Form>
       </div>
     </div>
-      {/* <div id= "signUp">
-        <div>
-          <div id ="signuphead"></div>
-          <div id ="signupbody">
-          <form>
-            <label for="fname">First name </label>
-            <input type="text" id="fname" name="fname" value="" /><br />
-            <label for="lname">Last name  </label>
-            <input type="text" id="lname" name="lname" value="" /><br />
-            <label for="uname">Username </label>
-            <input type="text" id="uname" name="uname" value="" /><br />
-            <label for="pswd">Password  </label>
-            <input type="text" id="pswd" name="pswd" value="" />
-          </form>
-          </div>
-          <div id ="signupfoot">
-            <button onClick={register}>Register</button>
-            <button onClick={register} style = {{marginLeft: "4px"}}>Cancel</button>
-          </div>
-        </div>
-      </div> */}
+      <div className="sigin" id= "signUp">
+      <div id ="signinhead"></div>
+          <div id ="signinbody">
+          <Form.Group size="lg" controlId="fname">
+          <Form.Label>First Name</Form.Label>
+          <Form.Control
+            type="firstname"
+            value={firstname}
+            onChange={(e) => setFirstname(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group size="lg" controlId="lastname">
+          <Form.Label>Last name</Form.Label>
+          <Form.Control
+            type="lastname"
+            value={lastname}
+            onChange={(e) => setLastname(e.target.value)}
+          />
+        </Form.Group>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group size="lg" controlId="email">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            autoFocus
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group size="lg" controlId="password">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </Form.Group>
+        
+        <Button  id="signupfoot" block size="lg" type="submit" disabled={!validateForm()}>
+          Login
+        </Button>
+      </Form>
+      </div>
+    </div>
      
       <div style={style2} id = "searchfield">
         <SearchField />
