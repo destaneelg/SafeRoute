@@ -33,7 +33,7 @@ function Navbar() {
       dialogbox.style.top = "100px";
       dialogbox.style.display="block";
       document.getElementById('dialogboxhead').innerHTML = "About SafeRoute";
-      document.getElementById('dialogboxbody').innerHTML = "Summary information";
+      document.getElementById('dialogboxbody').innerHTML = "SafeRoute is a search engine that allows you to search for non-gender conforming restrooms. We recognize an opportunity to help trans people find places to comfortably utilize public restrooms without the threat of harassment. In addition, this  service is beneficial for those attending children or the disabled.";
       document.getElementById('searchfield').style.display = 'none';
     }
    
