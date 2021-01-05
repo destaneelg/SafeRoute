@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button"
 import SearchField from "../SearchField";
 
 
@@ -64,11 +66,22 @@ function Navbar() {
       }
     }
 
-    function login () {
-      document.getElementById('signin').style.display = 'none';
-      document.getElementById('dialogoverlay').style.display = 'none';
-      document.getElementById('searchfield').style.display = 'flex';
-    }
+    // function login () {
+    //   document.getElementById('signin').style.display = 'none';
+    //   document.getElementById('dialogoverlay').style.display = 'none';
+    //   document.getElementById('searchfield').style.display = 'flex';
+    // }
+    const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
     
     var signIn = new SignIn();
 
@@ -91,11 +104,11 @@ function Navbar() {
       }
     }
 
-    function register () {
-      document.getElementById('signUp').style.display = 'none';
-      document.getElementById('dialogoverlay').style.display = 'none';
-      document.getElementById('searchfield').style.display = 'flex';
-    }
+    // function register () {
+    //   document.getElementById('signUp').style.display = 'none';
+    //   document.getElementById('dialogoverlay').style.display = 'none';
+    //   document.getElementById('searchfield').style.display = 'flex';
+    // }
     
     var signUp = new SignUp();
 //React HTML portion =================================================================================================================================
@@ -152,26 +165,34 @@ function Navbar() {
           </div>
         </div>
       </div>
-
-      <div id= "signin">
-        <div>
-          <div id ="signinhead"></div>
+      <div className="Login" id= "signin">
+      <div id ="signinhead"></div>
           <div id ="signinbody">
-          <form>
-            <label for="fname">Username</label><br />
-            <input type="text" id="fname" name="fname" value="John" /><br />
-            <label for="lname">Password</label><br />
-            <input type="text" id="lname" name="lname" value="Doe" />
-          </form>
-          </div>
-          <div id ="signinfoot">
-            <button onClick={login}>Sign In</button>
-            <button onClick={login} style = {{marginLeft: "4px"}}>Cancel</button>
-          </div>
-        </div>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group size="lg" controlId="email">
+          <Form.Label>Username</Form.Label>
+          <Form.Control
+            autoFocus
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group size="lg" controlId="password">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </Form.Group>
+        <Button block size="lg" type="submit" disabled={!validateForm()}>
+          Login
+        </Button>
+      </Form>
       </div>
-
-      <div id= "signUp">
+    </div>
+      {/* <div id= "signUp">
         <div>
           <div id ="signuphead"></div>
           <div id ="signupbody">
@@ -191,7 +212,7 @@ function Navbar() {
             <button onClick={register} style = {{marginLeft: "4px"}}>Cancel</button>
           </div>
         </div>
-      </div>
+      </div> */}
      
       <div style={style2} id = "searchfield">
         <SearchField />
