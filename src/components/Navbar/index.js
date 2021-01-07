@@ -67,7 +67,7 @@ function Navbar() {
       }
     }
 
-    function login () {
+    function cancel () {
       document.getElementById('signin').style.display = 'none';
       document.getElementById('dialogoverlay').style.display = 'none';
       document.getElementById('searchfield').style.display = 'flex';
@@ -103,11 +103,12 @@ function Navbar() {
         signUp.style.top = "100px";
         signUp.style.display="block";
         document.getElementById('searchfield').style.display = 'none';
+        document.getElementById('signuphead').innerHTML = "Sign Up";
       }
     
     }
 
-    function register () {
+    function cancel2 () {
       document.getElementById('signUp').style.display = 'none';
       document.getElementById('dialogoverlay').style.display = 'none';
       document.getElementById('searchfield').style.display = 'flex';
@@ -115,7 +116,8 @@ function Navbar() {
     
     var signUp = new SignUp();
 //React HTML portion =================================================================================================================================
-  return (
+  
+return (
     <div>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       
@@ -157,9 +159,11 @@ function Navbar() {
       </div>
       
     </nav>
+
+{/* About Dialog Box ========================================================================================================================== */}
     
     <div id ="dialogoverlay"></div>
-      <div id= "dialogbox">
+      <div id= "dialogbox" style ={{transform: "translateY(-70px)"}}>
         <div>
           <div id ="dialogboxhead"></div>
           <div id ="dialogboxbody"></div>
@@ -168,39 +172,52 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="Login" id= "signin">
-      <div id ="signinhead"></div>
+
+{/* Sign In Dialog Box======================================================================================================================= */}
+    
+    <div className="Login" id= "signin" style = {{color: "yellow"}}>
+      <div style = {{backgroundColor: "rgb(0, 128, 0, .75)"}}>
+      <div id ="signinhead" style = {{fontSize: "30px", transform: "translateY(5px)"}}></div>
           <div id ="signinbody">
       <Form onSubmit={handleSubmit}>
-        <Form.Group size="lg" controlId="email">
+        <Form.Group size="lg" controlId="email" style = {{transform: "translateY(-12px)"}}>
           <Form.Label>Email</Form.Label>
           <Form.Control
+            id = "sie"
             autoFocus
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group size="lg" controlId="password">
+        <Form.Group size="lg" controlId="password" style = {{transform: "translateY(-8px)"}}>
           <Form.Label>Password</Form.Label>
           <Form.Control
+            id = "sip"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
+        <Button block size="lg" type="submit" disabled={!validateForm()} style = {{transform: "translate(200px, 12px)"}}>
           Login
         </Button>
+        <button onClick={cancel} style = {{transform: "translate(210px, 12px)"}}>Close</button>
       </Form>
       </div>
     </div>
-      <div className="sigin" id= "signUp">
-      <div id ="signinhead"></div>
-          <div id ="signinbody">
+    </div>
+
+{/* Sign Up Dialog Box ====================================================================================================================================== */}
+    
+    <div className="sigup" id= "signUp" style = {{color: "yellow"}}>
+      <div style = {{backgroundColor: "rgb(0, 128, 0, .75)"}}>
+      <div id ="signuphead" style = {{fontSize: "30px", transform: "translateY(10px)"}}></div>
+          <div id ="signupbody">
           <Form.Group size="lg" controlId="fname">
           <Form.Label>First Name</Form.Label>
           <Form.Control
+            id = "suf"
             type="firstname"
             value={firstname}
             onChange={(e) => setFirstname(e.target.value)}
@@ -209,6 +226,7 @@ function Navbar() {
         <Form.Group size="lg" controlId="lastname">
           <Form.Label>Last name</Form.Label>
           <Form.Control
+            id = "sul"
             type="lastname"
             value={lastname}
             onChange={(e) => setLastname(e.target.value)}
@@ -218,6 +236,7 @@ function Navbar() {
         <Form.Group size="lg" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
+            id = "sue"
             autoFocus
             type="email"
             value={email}
@@ -227,17 +246,20 @@ function Navbar() {
         <Form.Group size="lg" controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            id = "sup"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
         
-        <Button  id="signupfoot" block size="lg" type="submit" disabled={!validateForm()}>
+        <Button  id="signupfoot" block size="lg" type="submit" disabled={!validateForm()} style = {{transform: "translate(200px, 12px)"}}>
           Login
         </Button>
+        <button onClick={cancel2} style = {{transform: "translate(210px, 12px)"}}>Close</button>
       </Form>
       </div>
+    </div>
     </div>
      
       <div style={style2} id = "searchfield">

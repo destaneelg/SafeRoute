@@ -85,25 +85,28 @@ padding-top: 10px;
 }
 
 #dialogbox > div { 
-  background: rgb(0, 128, 0, .5);
+  background: rgb(0, 128, 0, .75);
   margin: 8px;
 }
 
 #dialogbox > div > #dialogboxhead {
-  background: rgb(0, 128, 0, .5); 
-  font-size:25px;
+  /* background: rgb(0, 128, 0, .5);  */
+  font-size:30px;
   padding: 10px; 
   color:yellow;
+  transform: translateY(10px)
+
 }
 
 #dialogbox > div > #dialogboxbody{
-  background:rgb(0, 128, 0, .5);
+  /* background:rgb(0, 128, 0, .5); */
   padding: 20px;
   color: yellow;
+  transform: translateY(10px)
 }
 
 #dialogbox > div > #dialogboxfoot{
-  background:rgb(0, 128, 0, .5);
+  /* background:rgb(0, 128, 0, .5); */
   padding: 10px;
   text-align: right;
 }
@@ -119,36 +122,36 @@ padding-top: 10px;
   border-radius:7px;
 }
 
-#signin > div > #signinbody> form{
+/* #signin > div > #signinbody> form{
   height: 100px;
   position: relative;
   z-index:10;
-}
+} */
 
 #signin > div > #signinbody> form > input{
   border-radius: 5px;
 }
 
 #signin > div { 
-  background:rgb(0, 128, 0, .5);
+  /* background:rgb(0, 128, 0, .5); */
   margin: 8px;
 }
 
 #signin > div > #signinhead {
-  background: rgb(0, 128, 0, .5);
+  /* background: rgb(0, 128, 0, .5); */
   font-size:25px;
   padding: 10px; 
   color: yellow;
 }
 
 #signin > div > #signinbody{
-  background:rgb(0, 128, 0, .5);
+  /* background:rgb(0, 128, 0, .5); */
   padding: 20px;
   color: yellow;
 }
 
 #signin > div > #signinfoot{
-  background:rgb(0, 128, 0, .5);
+  /* background:rgb(0, 128, 0, .5); */
   padding: 10px;
   text-align: right;
 }
@@ -165,12 +168,12 @@ padding-top: 10px;
   border: 5px double black;
 }
 
-#signUp > div > #signupbody> form{
+/* #signUp > div > #signupbody> form{
   height: 100px;
   position: relative;
   z-index:10;
   font-size: 20px;
-}
+} */
 
 #signUp > div > #signupbody> form > input{
  border-radius: 5px;
@@ -178,27 +181,32 @@ padding-top: 10px;
 
 
 #signUp > div { 
-  background:rgb(0, 128, 0, .5);
+  /* background:rgb(0, 128, 0, .5); */
   margin: 8px;
 }
 
-#signUp > div > #signuphead {
-  background: rgb(0, 128, 0, .5);
+/* #signUp > div > #signuphead {
+  background: rgb(0, 128, 0, .5); 
   font-size:25px;
   padding: 10px; 
   color: yellow;
-}
+} */
 
 #signUp > div > #signupbody{
-  background:rgb(0, 128, 0, .5);
+  /* background:rgb(0, 128, 0, .5); */
   padding: 20px;
   color: yellow;
 }
 
 #signUp > div > #signupfoot{
-  background:rgb(0, 128, 0, .5);
+  /* background:rgb(0, 128, 0, .5); */
   padding: 10px;
   text-align: right;
+}
+
+#suf, #sul, #sue, #sup, #sie, #sip {
+  margin-left: 10px;
+  border-radius:5px;
 }
 
 button {
