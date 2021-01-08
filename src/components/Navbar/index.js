@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button"
-import SearchField from "../SearchField";
+import SearchField from "../SearchField/Search";
 
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
