@@ -29,6 +29,16 @@
   top: -1px;
   font-size: 24px;
   color: #555;
-  right: 18px
-  
+  right: 18px;
+}
+
+#searchicon{
+  transform: translateY(-95px)
+}
+
+#search-input{
+  border-radius: 25px;
+  width: 60%;
+  height: 10px;
+  transform: translateY(-95px)
 }
