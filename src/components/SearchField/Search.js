@@ -1,6 +1,7 @@
 import React from 'react';
 import '../SearchField/Search.css';
 import axios from 'axios';
+import APIJSONDATA from './API_DATA.json';
 
 class Search extends React.Component {
 
@@ -20,7 +21,7 @@ class Search extends React.Component {
     //fetching query results from refuge restroom api
     fetchSearchResults = ( updatedPageNo = '', _query ) => {
     //  const pageNumber = updatedPageNo ? `page=1${updatedPageNo}` : '';
-       const searchURL = `https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=20&offset=0&unisex=true&query=Texas` ; 
+       const searchAPIjson = `https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=20&offset=0&unisex=true&query=Texas` ; 
 
        // if statement for cancel token 
         if( this.cancel ) {
@@ -29,7 +30,7 @@ class Search extends React.Component {
         // creates new stoke
         this.cancel = axios.CancelToken.source();
 
-        axios.get( searchURL, {
+        axios.get( searchAPIjson, {
             cancelToken: this.cancel.token
         } )
 
