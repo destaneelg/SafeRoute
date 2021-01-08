@@ -116,7 +116,7 @@ if ( Object.keys( results ).length && results.length ) {
                 // Calling function for what user types
                     onChange={this.handleOnInputChange}
                     />
-<i className="fas fa-search search-icon"></i>
+<i className="fas fa-search search-icon" id="searchicon"></i>
    </label>
 
 

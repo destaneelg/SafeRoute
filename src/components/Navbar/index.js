@@ -115,6 +115,7 @@ function Navbar() {
     }
     
     var signUp = new SignUp();
+
 //React HTML portion =================================================================================================================================
   
 return (
@@ -253,10 +254,10 @@ return (
           />
         </Form.Group>
         
-        <Button  id="signupfoot" block size="lg" type="submit" disabled={!validateForm()} style = {{transform: "translate(200px, 12px)"}}>
-          Login
+        <Button  id="signupfoot" block size="lg" type="submit" disabled={!validateForm()} style = {{transform: "translate(190px, 12px)"}} >
+          Register
         </Button>
-        <button onClick={cancel2} style = {{transform: "translate(210px, 12px)"}}>Close</button>
+        <button onClick={cancel2} style = {{transform: "translate(200px, 12px)"}}>Close</button>
       </Form>
       </div>
     </div>

@@ -2,7 +2,7 @@ import './App.css';
 import React from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router } from "react-router-dom";
-import Search from "./components/SearchField/Search";
+
 
 
 function App() {
@@ -28,7 +28,6 @@ function App() {
     <Router>
     <div container-fluid App-header className="App" style={style}>
     <Navbar />
-    <Search />
     </div>
     </Router>
     
