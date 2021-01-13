@@ -1,43 +1,23 @@
 var express   =    require("express");
-var mysql     =    require('mysql');
 var app       =    express();
+var login = require('./routes/loginroutes');
+var bodyParser = require('body-parser');
 
-var pool      =    mysql.createPool({
-    connectionLimit : 100, //important
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    database : 'address_book',
-    debug    :  false
+var bodyParser = require('body-parser');
+let cors = require('cors')
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors())
+
+var router = express.Router();
+
+router.get('/', function(req, res) {
+    res.json({ message: 'Welcome to SafeRoute' });
 });
 
-function handle_database(req,res) {
+router.post('/register',login.register);
+router.post('/login',login.login)
 
-    pool.getConnection(function(err,connection){
-        if (err) {
-          connection.release();
-          res.json({"code" : 100, "status" : "Error in connection database"});
-          return;
-        }   
-
-        console.log('connected as id ' + connection.threadId);
-
-        connection.query("select * from user",function(err,rows){
-            connection.release();
-            if(!err) {
-                res.json(rows);
-            }           
-        });
-
-        connection.on('error', function(err) {      
-              res.json({"code" : 100, "status" : "Error in connection database"});
-              return;     
-        });
-  });
-}
-
-app.get("/",function(req,res){-
-        handle_database(req,res);
-});
+app.use('/api', router);
 
 app.listen(3000);
