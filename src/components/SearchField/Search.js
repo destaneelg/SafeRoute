@@ -3,6 +3,7 @@ import '../SearchField/Search.css';
 import axios from 'axios';
 import Loader from '../../loader.gif';
 
+
 class Search extends React.Component {
 
 
@@ -21,6 +22,7 @@ class Search extends React.Component {
         }
 
     //fetching query results from refuge restroom api
+
 
     fetchSearchResults = ( updatedPageNo = '', query ) => {
      const pageNumber = updatedPageNo ? `page=${updatedPageNo}` : '';
@@ -41,6 +43,7 @@ class Search extends React.Component {
             //         document.getElementById("content").innerHTML = myJSON;
             //     }).catch(err => console.log(err));
             //     } 
+
 
 
 
@@ -154,9 +157,11 @@ class Search extends React.Component {
                     />
 
 
+
                                             {/*Continuation of Allyse's test code*/}
                                                     {/* onClick = {search} */}
 <i className="fas fa-search search-icon" id="searchicon"></i>
+
    </label>
 
 {message && <p className="message"> { message }</p>}
@@ -165,8 +170,11 @@ class Search extends React.Component {
 <img src={Loader} className={`search-loading ${ loading ? 'show' : 'hide' } `} alt="loader"/>
 
 { this.renderSearchResults() } 
+
          <div id = 'content'></div></div>
+
          )
      }
 }
+
     export default Search
