@@ -6,9 +6,10 @@
 
 .heading {
   font-size: 30px;
-  padding: 16px 0;
+  padding: 16px;
   color: #444;
   text-align: center;
+ 
 }
 
 .search-label {
@@ -41,4 +42,35 @@
   width: 60%;
   height: 10px;
   transform: translateY(-95px)
+}
+
+
+/*Results
+
+.results-container {
+
+}*/
+
+.result-item {
+  padding: 16px;
+  border: 1px;
+  background-color: rgb(105, 128, 105, .5);
+  color: black;
+  margin: 16px;
+  box-shadow: 2px 2px 2px #898989;
+
+}
+
+.search-loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.show {
+  display: inline-block;
+}
+.hide {
+  display: none;
 }
