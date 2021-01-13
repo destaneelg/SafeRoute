@@ -1,7 +1,10 @@
 import React from 'react';
 import '../SearchField/Search.css';
 import axios from 'axios';
-import APIJSONDATA from '../../API_DATA.json';
+import APIJSONDATA from './API_DATA.json';
+
+
+
 
 class Search extends React.Component {
 
@@ -23,15 +26,34 @@ class Search extends React.Component {
     }
 
     //fetching query results from refuge restroom api
-    fetchSearchResults = ( updatedPageNo = '', query ) => {
-        console.log("fetchSearchResults")
-     const pageNumber = updatedPageNo ? `page=1${updatedPageNo}` : '';
-    //  APIJSONDATA.forEach(data => {
-    //     console.log("name: ", data.name);
-    //     console.log("city: ", data.city);
-    // })
-       const searchURL = `https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=10&offset=100&query=${query}` ; 
+//     fetchSearchResults = ( updatedPageNo = '', query ) => {
+//         console.log("fetchSearchResults")
+//      const pageNumber = updatedPageNo ? `page=1${updatedPageNo}` : '';
+//     //  APIJSONDATA.forEach(data => {
+//     //     console.log("name: ", data.name);
+//     //     console.log("city: ", data.city);
+//     // })
+//        const searchURL = `https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=10&offset=100&query=${query}` ; 
 
+  function search () {
+    var input = document.getElementById('search-input').value;
+    
+    axios.get("https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=20&offset=0&unisex=true&query=Texas")
+    .then(function(response){
+    var myJSON = JSON.stringify("Name: " + response.data[0].name + "<br><br>" +
+    "Street: " + response.data[0].street + "<br><br>" + response.data[0].city + 
+    "<br><br>" + response.data[0].state + "<br><br>" + response.data[0].directions);
+
+    document.getElementById("content").innerHTML = myJSON;
+  
+    }).catch(err => console.log(err));
+  }
+
+  
+  
+  
+  
+  
     // fetch("../..API_DATA.json") 
     // .then(function(resp) {
     //     return resp.json();
@@ -136,13 +158,15 @@ if ( Object.keys( results ).length && results.length ) {
                 // Calling function for what user types
                     onChange={this.handleOnInputChange}
                     />
-<i className="fas fa-search search-icon" id="searchicon"></i>
+<i className="fas fa-search search-icon" id="searchicon" onClick = {search}></i>
    </label>
 
 
 { this.renderSearchResults() } 
+<div id = 'content'></div>
          </div>
          )
      }
 }
+
     export default Search
