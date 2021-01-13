@@ -1,7 +1,7 @@
 import React from 'react';
 import '../SearchField/Search.css';
 import axios from 'axios';
-import APIJSONDATA from './API_DATA.json';
+import APIJSONDATA from '../../API_DATA.json';
 
 class Search extends React.Component {
 
@@ -16,12 +16,22 @@ class Search extends React.Component {
         }
         //variable to start cancel token
         this.cancel = '';
+        APIJSONDATA.forEach(data => {
+            console.log("name: ", data.name);
+            console.log("city: ", data.city);
+        })
     }
-
-    //fetching query results from refuge restroom api
-    fetchSearchResults = ( updatedPageNo = '', _query ) => {
-    //  const pageNumber = updatedPageNo ? `page=1${updatedPageNo}` : '';
-       const searchAPIjson = `https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=20&offset=0&unisex=true&query=Texas` ; 
+    
+    //fetching query results from refuge restroom api  NEED TO CAL FETCH FUNCTION
+    fetchSearchResults = ( updatedPageNo = '', query ) => {
+        console.log("fetchSearchResults")
+     const pageNumber = updatedPageNo ? `page=1${updatedPageNo}` : '';
+        APIJSONDATA.forEach(data => {
+            console.log("name: ", data.name);
+            console.log("city: ", data.city);
+        })
+       const searchURL = `https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=10&offset=0&query=United%20States
+       ` ; 
 
        // if statement for cancel token 
         if( this.cancel ) {
@@ -30,7 +40,7 @@ class Search extends React.Component {
         // creates new stoke
         this.cancel = axios.CancelToken.source();
 
-        axios.get( searchAPIjson, {
+        axios.get( searchURL, {
             cancelToken: this.cancel.token
         } )
 
@@ -84,7 +94,7 @@ if ( Object.keys( results ).length && results.length ) {
      { results.map( result => {
          return (
              <a key={ result.id } href={ result.name } className="result-item">
-                <h6 className="image-name">{result.name}</h6>
+                <h6 className="image-name">{ result.city }</h6>
                 <div className="image-wrapper">
                     <img className="image" src={ result.name } alt={`${result.name}`}/>
                 </div>
