@@ -1,0 +1,15 @@
+.footer {
+    background: rgba(32, 1, 23, 0.849);
+    background-size: cover;
+    -webkit-background-size: cover;
+    text-align: center;
+    overflow: hidden;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #5bc0de;
+}

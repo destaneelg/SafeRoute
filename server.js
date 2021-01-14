@@ -1,23 +1,23 @@
-var express   =    require("express");
-var app       =    express();
-var login = require('./routes/loginroutes');
-var bodyParser = require('body-parser');
+// var express   =    require("express");
+// var app       =    express();
+// var login = require('./routes/loginroutes');
+// var bodyParser = require('body-parser');
 
-var bodyParser = require('body-parser');
-let cors = require('cors')
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(cors())
+// var bodyParser = require('body-parser');
+// let cors = require('cors')
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+// app.use(cors())
 
-var router = express.Router();
+// var router = express.Router();
 
-router.get('/', function(req, res) {
-    res.json({ message: 'Welcome to SafeRoute' });
-});
+// router.get('/', function(req, res) {
+//     res.json({ message: 'Welcome to SafeRoute' });
+// });
 
-router.post('/register',login.register);
-router.post('/login',login.login)
+// router.post('/register',login.register);
+// router.post('/login',login.login)
 
-app.use('/api', router);
+// app.use('/api', router);
 
-app.listen(3000);
+// app.listen(3000);
