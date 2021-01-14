@@ -48,7 +48,7 @@ Email: OfficialQuin@icloud.com
 
 
 <br>
-<img src='https://avatars3.githubusercontent.com/u/65247434?v=4' height='200px' alt='github avatar'>
+<img src='https://avatars1.githubusercontent.com/u/67211677?s=400&u=9006c3024307cea89449bf62790066397d1fb49d&v=4' height='200px' alt='github avatar'>
 <br>
 <a href='https://github.com/Allyse500'>Github Profile: Aivorlan</a>
 <br>
