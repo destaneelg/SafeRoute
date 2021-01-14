@@ -20,22 +20,19 @@ To download this app:
 
 3. Run 'npm start' in git bash terminal to host application.
 
-# Dependencies 
+# Dependencies (Refer to package.json for full list of dependencies)
 * npm install 
 * npm i react-scripts
 * express
 * mysql
 * sequelize 
 * axios 
-** Refer to package.json for full list of dependencies 
 
+# Example of new library, package or technology used
+* bcrypt 
+*
 
 ## Contributors 
-
-
-
-
-
 <br>
 <img src='https://avatars3.githubusercontent.com/u/65247434?v=4' height='200px' alt='github avatar'>
 <br>
