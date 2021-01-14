@@ -20,6 +20,11 @@ To download this app:
 
 3. Run 'npm start' in git bash terminal to host application.
 
+4. Open MySQL Workbench. Copy sql files info into workbench and run the file
+(highlight all data and click thunderbolt) to initiate database. Insert your 
+MySQL password for the database password. Encrypt it by using process.env.
+Hide the value in the .gitignore file.
+
 # Dependencies (Refer to package.json for full list of dependencies)
 * npm install 
 * npm i react-scripts
