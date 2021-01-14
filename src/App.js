@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 
 
+
 function App() {
 
   document.title="Safe Route";
@@ -34,14 +35,6 @@ function App() {
   );
 }
 
-// class App extends React.Component {
-//   render() {
-//       return (
-//           <div>
-//               <Search/>
-//           </div>
-//       )
-//   }
-// }
+
 
 export default App;
