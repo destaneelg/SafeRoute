@@ -119,10 +119,12 @@ class Search extends React.Component {
                             
                                 <h8 className="image-name">
                                     <p className="result-item">
-                                    {result.name}
-                                    {result.street}
-                                    {result.city}
-                                    {result.state}
+                                    {result.name},
+                                    {result.street},
+                                    {result.city},
+                                    {result.state},
+                                    <h9>Unisex: {result.unisex.value}
+                                    Accessible: {result.accessible.value}</h9>
                                     </p>
                                 </h8>
                             

@@ -2,6 +2,7 @@ import './App.css';
 import React from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -27,9 +28,11 @@ function App() {
   return (
     
     <Router>
-    <div container-fluid App-header className="App" style={style}>
+    <div container-fluid="true" app-header="true" className="App" style={style}>
     <Navbar />
+    
     </div>
+    <Footer />
     </Router>
     
   );
