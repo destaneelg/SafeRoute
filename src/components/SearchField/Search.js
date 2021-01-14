@@ -3,6 +3,37 @@ import '../SearchField/Search.css';
 import axios from 'axios';
 import Loader from '../../img/loader.gif';
 
+// import APIURL from '../../API_DATA.json';
+
+
+// ******** The following code that is coded out was an attempt to resolve a 
+// “No 'Access-Control-Allow-Origin' header is present on the requested resource” error when trying to fetch data through local host
+// ******** This code was also initiated in an attempt to GET a route that we could use to POST data as a database 
+
+// const express = require('express');
+// const request = require('request');
+
+// const app = express();
+
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
+
+// app.get('/fetch', (req, res) => {
+//   request(
+//     { url: req.query.url },
+//     (error, response, body) => {
+//       if (error || response.statusCode !== 200) {
+//         return res.status(500).send('error');
+//       }
+//       res.send(body);
+//     }
+//   )
+// });
+
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => console.log(`listening on ${PORT}`));
 
 class Search extends React.Component {
 
@@ -22,8 +53,6 @@ class Search extends React.Component {
         }
 
     //fetching query results from refuge restroom api
-
-
     fetchSearchResults = ( updatedPageNo = '', query ) => {
      const pageNumber = updatedPageNo ? `page=${updatedPageNo}` : '';
        const searchURL = `https://www.refugerestrooms.org/api/v1/restrooms/search?${pageNumber}&per_page=40&offset=0&query=${query}` ; 
@@ -46,13 +75,6 @@ class Search extends React.Component {
 
 
 
-
-
-
-
-
-
-    
        // if statement for cancel token 
 
         if( this.cancel ) {
@@ -78,7 +100,7 @@ class Search extends React.Component {
 
              })                                                     
             //Displaying API data
-            // console.warn( res );
+            console.warn( res );
         } )
     .catch( error => {
             if (axios.isCancel(error) || error ) {
@@ -114,21 +136,25 @@ class Search extends React.Component {
                 if ( Object.keys( results ).length && results.length ) {
                 return (
                 <div className="results-container">
-                    { results.map( result => {
+                    { results.map( results => {
+
+                           
                         return (
-                            
                                 <h8 className="image-name">
+                                    {results.name}
                                     <p className="result-item">
-                                    {result.name},
-                                    {result.street},
-                                    {result.city},
-                                    {result.state},
-                                    <h9>Unisex: {result.unisex.value}
-                                    Accessible: {result.accessible.value}</h9>
+                                <ul>{results.street},
+                                    {results.city},
+                                    {results.state}</ul>
+                       <ul>Approved:{results.name.approved} <i class="far fa-smile"></i>/<i class="far fa-frown"></i></ul>  
+                         <ul>Unisex:{results.name.unisex} <i class="fas fa-genderless"></i></ul> 
+                     <ul>Accessible:{results.name.accessible} <i class="fab fa-accessible-icon"></i></ul> 
+                       <ul>Comments:{results.name.comment} </ul>
                                     </p>
                                 </h8>
                             
                         )
+                        
                     })}
 
                 </div>
@@ -153,7 +179,7 @@ class Search extends React.Component {
                     name="query"
                     value={query}
                     id="search-input"
-                    placeholder="Search..."
+                    placeholder="Search... "
                 // Calling function for what user types
                     onChange={this.handleOnInputChange}
                     />
