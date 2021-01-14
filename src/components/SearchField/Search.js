@@ -2,6 +2,40 @@ import React from 'react';
 import '../SearchField/Search.css';
 import axios from 'axios';
 import Loader from '../../img/loader.gif';
+// import APIURL from '../../API_DATA.json';
+
+
+// ******** The following code that is coded out was an attempt to resolve a 
+// “No 'Access-Control-Allow-Origin' header is present on the requested resource” error when trying to fetch data through local host
+// ******** This code was also initiated in an attempt to GET a route that we could use to POST data as a database 
+
+// const express = require('express');
+// const request = require('request');
+
+// const app = express();
+
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
+
+// app.get('/fetch', (req, res) => {
+//   request(
+//     { url: req.query.url },
+//     (error, response, body) => {
+//       if (error || response.statusCode !== 200) {
+//         return res.status(500).send('error');
+//       }
+//       res.send(body);
+//     }
+//   )
+// });
+
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => console.log(`listening on ${PORT}`));
+
+
+
 
 
 class Search extends React.Component {
