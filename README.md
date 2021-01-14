@@ -27,6 +27,7 @@ To download this app:
 * mysql
 * sequelize 
 * axios 
+Refer to package.json for full list of dependencies 
 
 
 ## Contributors 
