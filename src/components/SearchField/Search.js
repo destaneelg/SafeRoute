@@ -164,6 +164,10 @@ class Search extends React.Component {
  
 </label>
 
+
+   </label>
+
+
 {message && <p className="message"> { message }</p>}
 
 
