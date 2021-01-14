@@ -33,9 +33,9 @@ Hide the value in the .gitignore file.
 * sequelize 
 * axios 
 
-# Example of new library, package or technology used
+# Example of new library, package or technology used in app
 * bcrypt 
-*
+* npm http-proxy-middleware package
 
 ## Contributors 
 <br>
@@ -82,3 +82,7 @@ Email:
 * CodeyTek Academy tutorials 
 * https://fontawesome.com/changelog/latest
 * https://williamsinstitute.law.ucla.edu/publications/trans-adults-united-states/ 
+* https://create-react-app.dev/docs/proxying-api-requests-in-development/#invalid-host-header-errors-after-configuring-proxy
+*
+*
+*
