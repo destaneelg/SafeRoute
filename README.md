@@ -75,4 +75,7 @@ Email:
 
 
 ## Resources and credit 
-
+* https://www.npmjs.com/
+* CodeyTek Academy tutorials 
+* https://fontawesome.com/changelog/latest
+* https://williamsinstitute.law.ucla.edu/publications/trans-adults-united-states/ 
