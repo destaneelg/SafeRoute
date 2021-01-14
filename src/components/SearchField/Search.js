@@ -1,7 +1,33 @@
 import React from 'react';
 import '../SearchField/Search.css';
 import axios from 'axios';
-import Loader from '../../loader.gif';
+import Loader from '../../img/loader.gif';
+import APIJSONDATA from '../../API_DATA.json';
+
+// import APIJSONDATA from './API_DATA.json';
+
+
+function search () {
+    var input = document.getElementById('search-input').value;
+    
+    axios.get("https://www.refugerestrooms.org/api/v1/restrooms/search?page=1&per_page=20&offset=0&unisex=true&query=Texas")
+    .then(function(response){
+    var myJSON = JSON.stringify("Name: " + response.data[0].name + "<br><br>" +
+    "Street: " + response.data[0].street + "<br><br>" + response.data[0].city + 
+    "<br><br>" + response.data[0].state + "<br><br>" + response.data[0].directions);
+
+    document.getElementById("content").innerHTML = myJSON;
+  
+    }).catch(err => console.log(err));
+  }
+
+
+
+
+
+
+
+
 
 
 class Search extends React.Component {
@@ -165,7 +191,7 @@ class Search extends React.Component {
 </label>
 
 
-   </label>
+ 
 
 
 {message && <p className="message"> { message }</p>}
