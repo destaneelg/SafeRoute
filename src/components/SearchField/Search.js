@@ -1,6 +1,8 @@
 import React from 'react';
 import '../SearchField/Search.css';
 import axios from 'axios';
+import Loader from '../../img/loader.gif';
+import APIJSONDATA from '../../API_DATA.json';
 
 // import APIJSONDATA from './API_DATA.json';
 
@@ -20,11 +22,11 @@ function search () {
   }
 
 
-import APIJSONDATA from '../../API_DATA.json';
 
 
 
-import Loader from '../../loader.gif';
+
+
 
 
 
