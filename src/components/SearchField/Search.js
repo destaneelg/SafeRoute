@@ -161,8 +161,12 @@ class Search extends React.Component {
                                             {/*Continuation of Allyse's test code*/}
                                                     {/* onClick = {search} */}
 <i className="fas fa-search search-icon" id="searchicon"></i>
+ 
+</label>
+
 
    </label>
+
 
 {message && <p className="message"> { message }</p>}
 
