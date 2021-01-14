@@ -50,7 +50,7 @@ Email: OfficialQuin@icloud.com
 <br>
 <img src='https://avatars1.githubusercontent.com/u/67211677?s=400&u=9006c3024307cea89449bf62790066397d1fb49d&v=4' height='200px' alt='github avatar'>
 <br>
-<a href='https://github.com/Allyse500'>Github Profile: Aivorlan</a>
+<a href='https://github.com/Allyse500'>Github Profile: Allyse500</a>
 <br>
 If you have any questions, please feel free to contact me via email or LinkedIn message.
 <br>
@@ -62,9 +62,9 @@ Email:
 
 
 <br>
-<img src='https://avatars3.githubusercontent.com/u/65247434?v=4' height='200px' alt='github avatar'>
+<img src='https://avatars0.githubusercontent.com/u/65136924?s=400&u=f02213a3ea2e41c7b8d0d4cbc1c107ba358c3064&v=4' height='200px' alt='github avatar'>
 <br>
-<a href='https://github.com/destaneelg'>Github Profile: Aivorlan</a>
+<a href='https://github.com/destaneelg'>Github Profile: destaneelg</a>
 <br>
 If you have any questions, please feel free to contact me via email or LinkedIn message.
 <br>
