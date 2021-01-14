@@ -22,7 +22,7 @@ To download this app:
 
 # Dependencies 
 * npm install 
-* react-dom-router
+* npm i react-scripts
 * express
 * mysql
 * sequelize 
