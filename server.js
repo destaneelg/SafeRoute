@@ -1,23 +1,26 @@
-// var express   =    require("express");
-// var app       =    express();
-// var login = require('./routes/loginroutes');
-// var bodyParser = require('body-parser');
+const express = require('express');
+const mysql = require('mysql');
+const app = express();
 
-// var bodyParser = require('body-parser');
-// let cors = require('cors')
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
-// app.use(cors())
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+app.set('port', process.env.PORT || 3001);
 
-// var router = express.Router();
+// Express only serves static assets in production
+console.log('NODE_ENV: ', process.env.NODE_ENV);
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
 
-// router.get('/', function(req, res) {
-//     res.json({ message: 'Welcome to SafeRoute' });
-// });
+  // Return the main index.html, so react-router render the route in the client
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve('client/build', 'index.html'));
+  });
+}
 
-// router.post('/register',login.register);
-// router.post('/login',login.login)
 
-// app.use('/api', router);
-
-// app.listen(3000);
+app.listen(app.get('port'), () => {
+  console.log(`Find the server at: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
+});
