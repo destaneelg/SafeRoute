@@ -10,6 +10,7 @@ AS a user
 I WANT to search for approved NGC restrooms 
 
 ## Link to deployed Heroku app 
+https://safe--route.herokuapp.com/
 
 ## Code -Simplified
 To download this app:
