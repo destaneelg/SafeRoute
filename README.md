@@ -1,90 +1,70 @@
-# Safe Route
-Final Project: Non-gender confirming and Accessible restroom search
+# Getting Started with Create React App
 
-# About
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-SafeRoute is a search app for non-gender conforming restrooms. We recognize an opportunity to help transgender people find places to comfortably utilize public restrooms without the threat of harassment. In addition, this service is beneficial for those attending to children or people people with disabilities.
+## Available Scripts
 
-## User Story 
-AS a user
-I WANT to search for approved NGC restrooms 
+In the project directory, you can run:
 
-## Link to deployed Heroku app 
-https://safe--route.herokuapp.com/
+### `npm start`
 
-## Code -Simplified
-To download this app:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1. Clone the repo from this Git Hub account into your local git bash repository.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-2. Run 'npm install' to obtain all dependencies.
+### `npm test`
 
-3. Run 'npm start' in git bash terminal to host application.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-4. Open MySQL Workbench. Copy sql files info into workbench and run the file
-(highlight all data and click thunderbolt) to initiate database. Insert your 
-MySQL password for the database password. Encrypt it by using process.env.
-Hide the value in the .gitignore file.
+### `npm run build`
 
-# Dependencies (Refer to package.json for full list of dependencies)
-* npm install 
-* npm i react-scripts
-* express
-* mysql
-* sequelize 
-* axios 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-# Example of new library, package or technology used in app
-* bcrypt 
-* npm http-proxy-middleware package (must put 
-    "http-proxy-middleware": "^1.0.6", in package.json)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Contributors 
-<br>
-<img src='https://avatars3.githubusercontent.com/u/65247434?v=4' height='200px' alt='github avatar'>
-<br>
-<a href='https://github.com/Aivorlan'>Github Profile: Aivorlan</a>
-<br>
-If you have any questions, please feel free to contact me via email or LinkedIn message.
-<br>
-Email: OfficialQuin@icloud.com
-<br>
-<a href='https://www.linkedin.com/in/quinton-bryant-485a121a7'>Click here to message me on LinkedIn</a>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
-<br>
-<img src='https://avatars1.githubusercontent.com/u/67211677?s=400&u=9006c3024307cea89449bf62790066397d1fb49d&v=4' height='200px' alt='github avatar'>
-<br>
-<a href='https://github.com/Allyse500'>Github Profile: Allyse500</a>
-<br>
-If you have any questions, please feel free to contact me via email or LinkedIn message.
-<br>
-Email: 
-<br>
-<a href=''>Click here to message me on LinkedIn</a>
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-<br>
-<img src='https://avatars0.githubusercontent.com/u/65136924?s=400&u=f02213a3ea2e41c7b8d0d4cbc1c107ba358c3064&v=4' height='200px' alt='github avatar'>
-<br>
-<a href='https://github.com/destaneelg'>Github Profile: destaneelg</a>
-<br>
-If you have any questions, please feel free to contact me via email or LinkedIn message.
-<br>
-Email: 
-<br>
-<a href=''>Click here to message me on LinkedIn</a>
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Resources and credit 
-* https://www.npmjs.com/
-* CodeyTek Academy tutorials 
-* https://fontawesome.com/changelog/latest
-* https://williamsinstitute.law.ucla.edu/publications/trans-adults-united-states/ 
-* https://create-react-app.dev/docs/proxying-api-requests-in-development/#invalid-host-header-errors-after-configuring-proxy
-*
-*
-*
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
