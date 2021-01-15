@@ -35,7 +35,8 @@ Hide the value in the .gitignore file.
 
 # Example of new library, package or technology used in app
 * bcrypt 
-* npm http-proxy-middleware package
+* npm http-proxy-middleware package (must put 
+    "http-proxy-middleware": "^1.0.6", in package.json)
 
 ## Contributors 
 <br>
